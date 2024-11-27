@@ -1,0 +1,73 @@
+<!-- You might want to add additional HTML elements to ST. 
+    It's good practice to separate it out from your code -->
+<div class="thoughts_embedded_debug-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>Stepped Thinking Embedded Addon</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="tracker-block flex-container">
+                <input id="thoughts_embedded_enable" type="checkbox" />
+                <label for="thoughts_embedded_enable">Enable</label>
+            </div>
+            <hr>
+            <div>
+                <strong>Generel</strong>
+            </div>
+            <div class="tracker-block m-b-1 m-t-1">
+                <label for="thoughts_embedded_extract_regex">Extract Regex</label><br />
+                <small>The regex used to extract the thought of the thought message.</small>
+                <input id="thoughts_embedded_extract_regex" class="text_pole" rows="1" type="text"></input>
+            </div>
+            <div class="tracker-block m-b-1 m-t-1">
+                <label for="thoughts_embedded_thoughts_template">Thoughts Template</label><br />
+                <small>The overwall Template for the embedding. Needs to have the {{toughts}} macro.</small>
+                <textarea id="thoughts_embedded_thoughts_template" class="text_pole" rows="5"></textarea>
+            </div>
+            <div class="tracker-block m-b-1 m-t-1">
+                <label for="thoughts_embedded_thought_template">Thought Template</label><br />
+                <small>The template for every thought. Needs to have the {{tought}} macro.</small>
+                <textarea id="thoughts_embedded_thought_template" class="text_pole" rows="5"></textarea>
+            </div>
+            <hr class="sysHR" />
+            <div>
+                <strong>Thought parsing</strong>
+            </div>
+            <div class="tracker-block flex-container">
+                <input id="thoughts_embedded_parsing_enable" type="checkbox" />
+                <label for="thoughts_embedded_parsing_enable">Enable</label>
+            </div>
+            <div class="tracker-block m-b-1 m-t-1">
+                <label for="thoughts_embedded_parsing_plist_regex">PList Regex</label><br />
+                <input id="thoughts_embedded_parsing_plist_regex" class="text_pole" rows="1" type="text"></input>
+            </div>
+            <div class="tracker-block m-b-1 m-t-1">
+                <label for="thoughts_embedded_thought_plist_template">PList Thought Template</label><br />
+                <textarea id="thoughts_embedded_thought_plist_template" class="text_pole" rows="5"></textarea>
+            </div>
+            <div class="tracker-block m-b-1 m-t-1">
+                <label for="thoughts_embedded_parsing_yaml_regex">YAML Regex</label><br />
+                <input id="thoughts_embedded_parsing_yaml_regex" class="text_pole" rows="1" type="text"></input>
+            </div>
+            <div class="tracker-block m-b-1 m-t-1">
+                <label for="thoughts_embedded_thought_yaml_template">YAML Thought Template</label><br />
+                <textarea id="thoughts_embedded_thought_yaml_template" class="text_pole" rows="5"></textarea>
+            </div>
+
+            <hr class="sysHR" />
+            <div>
+                <strong>Debugging</strong>
+            </div>
+            <div class="tracker-block flex-container">
+                <input id="thoughts_embedded_debug" type="checkbox" />
+                <label for="thoughts_embedded_debug">Logging</label>
+            </div>
+            <div class="tracker-block flex-container">
+                <input id="thoughts_embedded_debug_vis" type="checkbox" />
+                <label for="thoughts_embedded_debug_vis">Message Inspector</label>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+#thinking-embedded-vis {
+    position: fixed;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: 300px;
+    height: auto;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    z-index: 1000;
+    font-family: var(--mainFontFamily);
+    font-size: 14px;
+    color: white;
+}
+
+.mes_thought {
+    display: none;
+}
+
+.mes_embedded_thought details pre code {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: var(--mainFontFamily);
+    font-size: smaller;
+    border-style: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.mes_embedded_thought details pre code i {
+    display: none;
+}
+
+.mes_embedded_thought details pre {
+    margin: 0px;
+}
+
+.thought_attribute {
+    font-weight: bolder;
+    font-size: smaller;
+    font-family: var(--mainFontFamily);
+    vertical-align: top;
+}
+
+.thought_value {
+    font-size: smaller;
+    margin-bottom: 5px;
+    font-family: var(--mainFontFamily);
+}
+
+.thoughts_error {
+    font-weight: bolder;
+    font-size: smaller;
+    font-family: var(--mainFontFamily);
+    color: var(--warning);
+}
