@@ -1,4 +1,4 @@
-# SillyTavern Stepped Thinking Extension Embedded Addon
+# Stepped Thinking Embedded Addon
 
 *Provide a brief description of how your extension works, what problem it aims to solve.*
 
