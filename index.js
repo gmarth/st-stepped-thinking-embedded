@@ -1,9 +1,10 @@
 import { eventSource, event_types } from "../../../../script.js";
 import { extension_settings } from "../../../../../../scripts/extensions.js";
 
+import { registerGenerationMutexListeners } from './lib/interconnection.js';
+
 import { initSettings } from "./src/settings/settings.js";
 import { updateVisualDebugger } from "./src/debug.js";
-
 import { eventHandlers } from "./src/events.js";
 
 export const extensionName = "st-stepped-thinking-embedded";
@@ -16,7 +17,7 @@ jQuery(async () => {
   await initSettings();
 });
 
-//registerGenerationMutexListeners();
+registerGenerationMutexListeners();
 
 eventSource.on(event_types.CHAT_CHANGED, eventHandlers.onChatChanged);
 eventSource.on(event_types.MESSAGE_RECEIVED, eventHandlers.onMessageReceived);

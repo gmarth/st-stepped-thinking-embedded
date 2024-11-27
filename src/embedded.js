@@ -1,4 +1,4 @@
-import { chat, saveChatConditional } from "../../../../../script.js";
+import { chat, saveChatConditional, substituteParams } from "../../../../../script.js";
 import { getContext } from "../../../../extensions.js";
 
 import { log, debug, error } from "./debug.js";
@@ -125,7 +125,7 @@ function extractThought(thought) {
 
 function parseThought(thought, char) {
     // plist
-    const regex = new RegExp(extensionSettings.plistRegex.replace('{{char}}', char), 'g');
+    const regex = new RegExp(substituteParams(extensionSettings.plistRegex), 'g');
     //debug('Plist regex: ', extensionSettings.plistRegex.replace('{{char}}', char))
     let match;
     let thoughts = '';

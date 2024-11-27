@@ -1,4 +1,7 @@
 import { chat } from "../../../../../script.js";
+
+import { generationCaptured } from "../lib/interconnection.js"
+
 import { log, updateVisualDebugger } from "./debug.js";
 import { isEnabled } from "./settings/settings.js"
 import { embedThoughtToMessage, embedThoughtsToChat, deleteRelatedThought } from "./embedded.js"
@@ -52,12 +55,16 @@ async function onSettingsUpdated() {
 async function onCharacterMessageRendered(mesId) {
     if (!await isEnabled() || !chat[mesId]) return;
     log("CHARACTER_MESSAGE_RENDERED");
-    if (chat[mesId].is_thoughts) {
-        $('#chat').find(`[mesid="${mesId}"]`).css('display', 'none');
-    }
+    //if (chat[mesId].is_thoughts) {
+    //$('#chat').find(`[mesid="${mesId}"]`).css('display', 'none');
+    //}
     if (!chat[mesId].is_thoughts && mesId !== 0 && chat[mesId - 1].is_thoughts) {
         embedThoughtToMessage(mesId);
     }
+}
+
+async function onGenerationMutexReleased() {
+
 }
 
 export const eventHandlers = {
