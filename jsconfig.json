@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".", // Make the current folder the base for resolving paths
+        "paths": {
+            // Aliases (optional, for convenience if you ever want to use them)
+            "/script.js": [
+                "../../../../public/script.js"
+            ], // Points to the `public` folder
+            "/scripts/*": [
+                "../../../../public/scripts/*"
+            ] // Points to `public/scripts`
+  
+        // No need for custom aliases for relative paths; they resolve naturally
+        }
+    },
+    "include": [
+        "**/*"
+    ] // Includes all files in your extension folder
+}

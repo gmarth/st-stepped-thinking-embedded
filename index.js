@@ -1,5 +1,5 @@
-import { eventSource, event_types } from "../../../../script.js";
-import { extension_settings } from "../../../../../../scripts/extensions.js";
+import { eventSource, event_types } from "/script.js";
+import { extension_settings } from "/scripts/extensions.js";
 
 import { registerGenerationMutexListeners } from './lib/interconnection.js';
 
